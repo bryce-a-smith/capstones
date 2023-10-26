@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!--Include link to bootstrap stylesheet.-->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!--Include my Stylesheet.-->
+    <link rel="stylesheet" href="css/myStyles.css" />
+  </head>
+  <body>
+    <header>
+      <!--Create Header with padding, dark background, and bottom border.-->
+      <div class="px-3 py-2 text-bg-dark border-bottom">
+        <!--Create Bootstrap container.-->
+        <div class="container">
+          <!--Create div for logo with a link to index.-->
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a
+              href="index.html"
+              class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
+            >
+              <img src="images/Logo.png" class="bi me-2" role="img" width="300" alt="Bryce Smith, Inc. Coffee Logo" />
+            </a>
+            <!--Navigate through website pages, greying the current page.-->
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+              <li>
+                <a href="index.html" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-secondary">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="products.html" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="checkout.html" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                    <use xlink:href="#people-circle"></use>
+                  </svg>
+                  Checkout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--Display additional links to login and registration pages. Applies button bootstrap classes.-->
+      <div class="px-3 py-2 border-bottom mb-3">
+        <div class="container d-flex flex-wrap justify-content-end">
+          <div class="text-end">
+            <a href="signin.html" class="btn btn-dark">Sign-in</a>
+            <a href="registration.html" class="btn bg-myStyles bg-gradient">Register</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!--Create bootstrap container.-->
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <!--Link Home Page with logo icon.-->
+            <a href="index.html" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <img class="bi mb-3" width="80" src="images/icon.png" alt="Coffee Logo" />
+            </a>
+            <h1 class="h3 mb-3 font-weight-normal">About Us</h1>
+          </div>
+        </div>
+
+        <div class="row-y py-4">
+          <!--Center the inline content.-->
+          <div class="col text-center">
+            <!--Make image fluid with screen size.-->
+            <img class="img-fluid" src="images/coffeeRoaster.jpeg" alt="Coffee Beans in Coffee Roaster" width:100% />
+            <br />
+          </div>
+        </div>
+        <!--Start new row.-->
+        <div class="row-y">
+          <div class="col">
+            <!--Display multiple paragraphs of text.-->
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, eum. Doloremque veritatis fugit labore
+              officia ea ipsa voluptas delectus commodi, modi nostrum ipsum nesciunt quod ut maiores accusantium a
+              natus.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illum totam, cumque perspiciatis
+              voluptatibus labore quod minus perferendis aliquam explicabo consequatur dignissimos voluptates odio
+              placeat cum ex. Voluptates, nostrum tempore!
+            </p>
+          </div>
+          <br />
+        </div>
+        <!--Start new row.-->
+        <!--Start new row.-->
+        <div class="row-y">
+          <div class="col">
+            <h3>Get Involved</h3>
+            <!--Display unordered list.-->
+            <ul>
+              <li>Career Opportunities</li>
+              <li>Tours</li>
+              <li>Contests</li>
+              <li>Training</li>
+              <li>Learn More</li>
+            </ul>
+            <!--Display additional text.-->
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sequi, commodi quos nisi facilis
+              aperiam veniam vel doloremque cumque sint illo nostrum quaerat minima sed sunt voluptate quo in quae.
+            </p>
+          </div>
+          <br />
+        </div>
+      </div>
+    </main>
+    <!--Display flexible footer with spaced out content, center alignment, padding, margin, and top border.-->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <!--Link to Home Page with standard icon.-->
+            <a href="index.html" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <img class="bi" width="30" height="24" src="https://img.logoipsum.com/277.svg" alt="logo" />
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Bryce Smith, Inc</span>
+          </div>
+          <div class="col">
+            <!--Navigate to specific pages.-->
+            <ul class="nav col justify-content-end list-unstyled d-flex">
+              <li class="ms-3"><a class="text-body-secondary" href="#">Home</a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="checkout.html">Checkout</a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#">Back to Top</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Include bootstrap js files.-->
+    <script src="scripts/bootstrap.bundle.js"></script>
+  </body>
+</html>
