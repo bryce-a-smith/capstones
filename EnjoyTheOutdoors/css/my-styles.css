@@ -1,4 +1,8 @@
+
+
 .my-background {
+  display: flex;
+  flex-direction: column;
   background-image: url("../images/my-background.jpg");
   height: 100vh;
   background-repeat: no-repeat;
@@ -27,4 +31,12 @@ nav ul li a:hover {
 }
 .current {
   background-color: #f7ad8d;
+}
+.title {
+  color: white;
+  align-self: center;
+  align-items: end;
+  padding-top: 21rem;
+  font-weight: lighter;
+  font-size: large;
 }
