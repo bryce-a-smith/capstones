@@ -55,3 +55,5 @@ const locationsArray = [
     "Wisconsin",
     "Wyoming"
 ]
+
+export {locationsArray};

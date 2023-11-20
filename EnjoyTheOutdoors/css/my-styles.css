@@ -1,4 +1,7 @@
-
+body {
+  background-color: #343554;
+  color: white;
+}
 
 .my-background {
   display: flex;
@@ -19,24 +22,41 @@ nav ul li {
 nav ul li a {
   padding: 8px;
   margin: 5px;
-  border: solid darkslateblue;
-  color: black;
+  border: solid #343554;
+  color: #343554;
   text-decoration: none;
   font-size: larger;
 }
 nav ul li a:hover {
-  background-color: #e67d50;
-  border: solid darkslateblue;
+  /* background-color: #e67d50; */
+  background-color: #F27650;
   padding: 9px;
 }
 .current {
   background-color: #f7ad8d;
 }
 .title {
-  color: white;
   align-self: center;
   align-items: end;
   padding-top: 21rem;
   font-weight: lighter;
   font-size: large;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.form-col {
+  width: 30%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+select {
+  padding: 0.25rem;
+  margin: 0.25rem 0 0.25rem 0;
+  width: 100%;
 }

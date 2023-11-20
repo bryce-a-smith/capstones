@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="css/my-styles.css">
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="css/my-styles.css" />
+    <style></style>
   </head>
   <body>
     <header class="my-background">
@@ -24,7 +22,24 @@
       </div>
     </header>
     <main>
-      
+      <div class="fieldset">
+        <div class="form-col">
+          <label for="search-by-select">Search By:</label>
+          <select id="search-by-select">
+            <option value="">Search by...</option>
+            <option value="location">Location</option>
+            <option value="type">Park type</option>
+          </select>
+          <label for="criteria-select">Criteria</label>
+          <select id="criteria-select">
+            <option value="">Select...</option>
+          </select>
+        </div>
+      </div>
     </main>
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/mountainData.js"></script>
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
   </body>
 </html>

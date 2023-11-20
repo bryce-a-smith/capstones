@@ -6858,3 +6858,5 @@ const nationalParksArray = [
     }
     }
 ]
+
+export {nationalParksArray};
