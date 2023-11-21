@@ -12,6 +12,8 @@ function init() {
   const parkListSelect = document.querySelector("#park-list-select");
   const displayP = document.querySelector("#display-p");
 
+  const mountainSelect = document.querySelector("#mountain-select");
+
   function clearParkList() {
     displayP.innerText = "";
   }
@@ -116,7 +118,7 @@ function init() {
   function populateParksByType(type) {
     let parkList = nationalParksArray.filter((p) => p.LocationName.includes(type));
     parkList.forEach((park) => {
-        displayPark(park);
+      displayPark(park);
     });
   }
 
@@ -136,13 +138,23 @@ function init() {
     }
   }
 
-  //main
-  loadCriteriaSelect();
+  ////
+
+  function loadMountainSelect() {}
+
+  function onMountainSelectChanged() {}
 
   //Wire-up
-  searchBySelect.addEventListener("change", onSelectionChanged);
-  criteriaSelect.addEventListener("change", onCriteriaSelectionChanged);
-  parkListSelect.addEventListener("change", onParkSelectionChanged);
+  if (searchBySelect) {
+    loadCriteriaSelect();
+
+    searchBySelect.addEventListener("change", onSelectionChanged);
+    criteriaSelect.addEventListener("change", onCriteriaSelectionChanged);
+    parkListSelect.addEventListener("change", onParkSelectionChanged);
+  }
+  if (mountainSelect) {
+    mountainSelect.addEventListener("change", onMountainSelectChanged);
+  }
 }
 
 window.onload = init;
