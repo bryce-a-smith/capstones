@@ -56,4 +56,4 @@ const locationsArray = [
     "Wyoming"
 ]
 
-export {locationsArray};
+// export {locationsArray};i

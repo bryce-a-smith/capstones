@@ -6859,4 +6859,4 @@ const nationalParksArray = [
     }
 ]
 
-export {nationalParksArray};
+// export {nationalParksArray};

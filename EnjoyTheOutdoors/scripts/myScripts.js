@@ -1,9 +1,9 @@
 "use strict";
 
-import { locationsArray } from "./locationData";
-import { mountainsArray } from "./mountainData";
-import { nationalParksArray } from "./nationalParkData";
-import { parkTypesArray } from "./parkTypeData";
+// import { locationsArray } from "./locationData";
+// import { mountainsArray } from "./mountainData";
+// import { nationalParksArray } from "./nationalParkData";
+// import { parkTypesArray } from "./parkTypeData";
 
 function init() {
 //Get html elements

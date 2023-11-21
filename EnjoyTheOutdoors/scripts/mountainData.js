@@ -529,4 +529,4 @@ const mountainsArray = [
     }
 ]
 
-export {mountainsArray};
+// export {mountainsArray};
