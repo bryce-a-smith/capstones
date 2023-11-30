@@ -10,12 +10,13 @@ function init() {
   const searchBySelect = document.querySelector("#search-by-select");
   const criteriaSelect = document.querySelector("#criteria-select");
   const parkListSelect = document.querySelector("#park-list-select");
-  const displayP = document.querySelector("#display-p");
+  const displayParksP = document.querySelector("#display-parks-p");
 
   const mountainSelect = document.querySelector("#mountain-select");
+  const displayMountainsDiv = document.querySelector("#display-mountains-div");
 
   function clearParkList() {
-    displayP.innerText = "";
+    displayParksP.innerText = "";
   }
 
   function resetCriteriaSelect() {
@@ -105,7 +106,7 @@ function init() {
   }
 
   function displayPark(park) {
-    displayP.innerText += `${park.LocationName}\n`;
+    displayParksP.innerText += `${park.LocationName}\n`;
   }
 
   function populateParksByLocation(loc) {
@@ -140,9 +141,57 @@ function init() {
 
   ////
 
-  function loadMountainSelect() {}
+  function clearMountainList() {
+    while(displayMountainsDiv.firstChild) {
+      displayMountainsDiv.removeChild(displayMountainsDiv.firstChild);
+    }
+  }
 
-  function onMountainSelectChanged() {}
+  function displayMountain(m) {
+    let currentCard = document.createElement("div");
+    let currentImage = document.createElement("img");
+    let currentH3 = document.createElement("h3");
+    let currentP = document.createElement("p");
+
+    currentImage.src = `images/${m.img}`;
+    currentH3.innerText = m.name;
+    currentP.innerText = "";
+
+
+    currentCard.appendChild(currentImage);
+    currentCard.appendChild(currentH3);
+    currentCard.appendChild(currentP);
+    displayMountainsDiv.appendChild(currentCard);
+  }
+
+  function populateMountains() {
+    if (mountainSelect.value == "all") {
+      mountainsArray.forEach((mountain) => {
+        displayMountain(mountain);
+      });
+    } else {
+      mountainsArray.forEach((mountain) => {
+        if (mountain.name == mountainSelect.value) {
+          displayMountain(mountain);
+        }
+      });
+    }
+  }
+
+  function loadMountainSelect() {
+    let mountainList = [];
+
+    mountainsArray.forEach((mountain) => {
+      let option = new Option(mountain.name, mountain.name);
+      mountainSelect.appendChild(option);
+    });
+  }
+
+  function onMountainSelectChanged() {
+    clearMountainList();
+
+    populateMountains();
+  }
 
   //Wire-up
   if (searchBySelect) {
@@ -153,6 +202,8 @@ function init() {
     parkListSelect.addEventListener("change", onParkSelectionChanged);
   }
   if (mountainSelect) {
+    loadMountainSelect();
+
     mountainSelect.addEventListener("change", onMountainSelectChanged);
   }
 }
