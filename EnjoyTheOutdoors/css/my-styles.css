@@ -60,3 +60,11 @@ select {
   margin: 0.25rem 0 0.25rem 0;
   width: 100%;
 }
+#display-mountains-div {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5rem 7rem 15rem 7rem;
+  width: 20rem;
+}
+#card {
+}

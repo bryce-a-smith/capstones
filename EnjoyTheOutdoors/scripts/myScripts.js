@@ -10,13 +10,15 @@ function init() {
   const searchBySelect = document.querySelector("#search-by-select");
   const criteriaSelect = document.querySelector("#criteria-select");
   const parkListSelect = document.querySelector("#park-list-select");
-  const displayParksP = document.querySelector("#display-parks-p");
+  const displayParksDiv = document.querySelector("#display-parks-div");
 
   const mountainSelect = document.querySelector("#mountain-select");
   const displayMountainsDiv = document.querySelector("#display-mountains-div");
 
   function clearParkList() {
-    displayParksP.innerText = "";
+    while(displayParksDiv.firstChild) {
+      displayParksDiv.removeChild(displayParksDiv.firstChild);
+    }
   }
 
   function resetCriteriaSelect() {
@@ -106,7 +108,29 @@ function init() {
   }
 
   function displayPark(park) {
-    displayParksP.innerText += `${park.LocationName}\n`;
+    // let currentCard = document.createElement("div");
+
+    // let currentH3 = document.createElement("h3");
+    // let currentH5 = document.createElement("h5");
+    // let currentP = document.createElement("p");
+    // let currentP2 = document.createElement("p");
+
+    // currentCard.classList.add("card");
+
+
+    // currentH3.innerText = m.name;
+    // currentH5.innerText = m.effort;
+    // currentP.innerText = m.desc;
+    // currentP2.innerText = `(${m.coords.lat},${m.coords.lng})`;
+
+
+
+    // currentCard.appendChild(currentH3);
+    // currentCard.appendChild(currentH5);
+    // currentCard.appendChild(currentP);
+    // currentCard.appendChild(currentP2);
+
+    // displayMountainsDiv.appendChild(currentCard);
   }
 
   function populateParksByLocation(loc) {
@@ -151,16 +175,25 @@ function init() {
     let currentCard = document.createElement("div");
     let currentImage = document.createElement("img");
     let currentH3 = document.createElement("h3");
+    let currentH5 = document.createElement("h5");
     let currentP = document.createElement("p");
+    let currentP2 = document.createElement("p");
+
+    currentCard.classList.add("card");
 
     currentImage.src = `images/${m.img}`;
     currentH3.innerText = m.name;
-    currentP.innerText = "";
+    currentH5.innerText = m.effort;
+    currentP.innerText = m.desc;
+    currentP2.innerText = `(${m.coords.lat},${m.coords.lng})`;
 
 
     currentCard.appendChild(currentImage);
     currentCard.appendChild(currentH3);
+    currentCard.appendChild(currentH5);
     currentCard.appendChild(currentP);
+    currentCard.appendChild(currentP2);
+
     displayMountainsDiv.appendChild(currentCard);
   }
 
