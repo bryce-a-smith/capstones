@@ -64,7 +64,11 @@ select {
   display: flex;
   flex-wrap: wrap;
   margin: 5rem 7rem 15rem 7rem;
-  width: 20rem;
+  width: 30rem;
 }
-#card {
+.card {
+  margin-bottom: 3rem;
+}
+a {
+  color: aqua;
 }

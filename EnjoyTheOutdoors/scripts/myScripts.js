@@ -130,6 +130,16 @@ function init() {
     currentCard.appendChild(currentP);
     currentCard.appendChild(currentP2);
 
+    if(park.Visit) {
+      let currentA = document.createElement("a");
+
+      currentA.href = park.Visit;
+      currentA.innerText = park.Visit;
+      currentA.target = "_blank";
+
+      currentCard.appendChild(currentA);
+    }
+
     displayParksDiv.appendChild(currentCard);
   }
 
