@@ -108,29 +108,29 @@ function init() {
   }
 
   function displayPark(park) {
-    // let currentCard = document.createElement("div");
+    let currentCard = document.createElement("div");
 
-    // let currentH3 = document.createElement("h3");
-    // let currentH5 = document.createElement("h5");
-    // let currentP = document.createElement("p");
-    // let currentP2 = document.createElement("p");
+    let currentH3 = document.createElement("h3");
+    let currentH5 = document.createElement("h5");
+    let currentP = document.createElement("p");
+    let currentP2 = document.createElement("p");
 
-    // currentCard.classList.add("card");
-
-
-    // currentH3.innerText = m.name;
-    // currentH5.innerText = m.effort;
-    // currentP.innerText = m.desc;
-    // currentP2.innerText = `(${m.coords.lat},${m.coords.lng})`;
+    currentCard.classList.add("card");
 
 
+    currentH3.innerText = park.LocationName;
+    currentH5.innerText = `${park.Address}\n${park.City}, ${park.State} ${park.ZipCode}`;
+    currentP.innerText = `Phone: ${park.Phone}\nFax: ${park.Fax}`;
+    currentP2.innerText = `(${park.Latitude},${park.Longitude})`;
 
-    // currentCard.appendChild(currentH3);
-    // currentCard.appendChild(currentH5);
-    // currentCard.appendChild(currentP);
-    // currentCard.appendChild(currentP2);
 
-    // displayMountainsDiv.appendChild(currentCard);
+
+    currentCard.appendChild(currentH3);
+    currentCard.appendChild(currentH5);
+    currentCard.appendChild(currentP);
+    currentCard.appendChild(currentP2);
+
+    displayParksDiv.appendChild(currentCard);
   }
 
   function populateParksByLocation(loc) {
