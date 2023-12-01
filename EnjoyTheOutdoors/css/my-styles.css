@@ -64,10 +64,10 @@ select {
   display: flex;
   flex-wrap: wrap;
   margin: 5rem 7rem 15rem 7rem;
-  width: 30rem;
 }
 .card {
   margin-bottom: 3rem;
+  width: 30rem;
 }
 a {
   color: aqua;
